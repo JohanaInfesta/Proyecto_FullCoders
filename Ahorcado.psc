@@ -26,6 +26,11 @@ Algoritmo Ahorcado
 			Escribir "Inicia el juego";
 			Escribir "Adivina la palabra";
 			Escribir ""; //Salto de linea
+			//leer la cantidad de letras de la palabra y las dibuja con un guion
+			Para i=1 Hasta longitud_palabra Hacer
+				Escribir " _ " Sin Saltar
+			FinPara
+			Escribir ""; //Salto de linea
 		FinSi
 	FinMientras
 FinAlgoritmo
