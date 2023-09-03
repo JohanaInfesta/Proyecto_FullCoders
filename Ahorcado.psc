@@ -127,6 +127,7 @@ Algoritmo Ahorcado
 			FinSi
 		FinSi
 	FinMientras
+	Escribir "Nos vemos luego!!";
 FinAlgoritmo
 
 Función dibujarIntentos(intentos)
