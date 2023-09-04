@@ -28,16 +28,16 @@ Algoritmo Ahorcado
 			Escribir ''
 			// leer la cantidad de letras de la palabra y las dibuja con un guion
 			Para i<-1 Hasta longitud_palabra Hacer
-				Escribir ' _ 'Sin Saltar
-			FinPara // Salto de linea
+				Escribir ' _ 'Sin Saltar // Salto de linea
+			FinPara
 			Escribir ''
 			// ciclo repetitivo para pedir letras en el juego
 			Mientras intentos>=1 Hacer
-				contador_aciertos <- 0
-				Escribir '' // Salto de linea
+				contador_aciertos <- 0 // Salto de linea
+				Escribir ''
 				Escribir 'Has usado la letra: ', letras_jugador
-				Escribir 'Te quedan: ', intentos, ' intentos'
-				Escribir 'Dime una letra: ' // Salto de linea
+				Escribir 'Te quedan: ', intentos, ' intentos' // Salto de linea
+				Escribir 'Dime una letra: '
 				Leer letra
 				// ciclo para comprobar que la letra ya a sido usada
 				Para j<-1 Hasta Longitud(letras_jugador) Hacer
@@ -47,8 +47,8 @@ Algoritmo Ahorcado
 						i <- longitud_palabra+1
 						contador_aciertos <- 99
 					SiNo
-						control <- 9
-					FinSi // evita conflictos con la ausencia de letras
+						control <- 9 // evita conflictos con la ausencia de letras
+					FinSi
 				FinPara
 				// si la letra es nueva, se agrega a la variable de letras 
 				Si control=9 Entonces
@@ -57,8 +57,8 @@ Algoritmo Ahorcado
 				i <- 1
 				// recorre la palabra secreta y verifica si la letra existe en ella
 				Mientras i<=longitud_palabra Hacer
-					Si letra=Subcadena(palabra_secreta,i,i) Entonces
-						contador_aciertos <- contador_aciertos+1 // contador para recorrer los caracteres de la palabra secreta
+					Si letra=Subcadena(palabra_secreta,i,i) Entonces // contador para recorrer los caracteres de la palabra secreta
+						contador_aciertos <- contador_aciertos+1
 						aciertos_acumulados <- aciertos_acumulados+1
 						Si aciertos_acumulados=longitud_palabra Entonces
 							i <- longitud_palabra+1
@@ -127,6 +127,7 @@ Algoritmo Ahorcado
 			FinSi
 		FinSi
 	FinMientras
+	Escribir 'Nos vemos luego!!'
 FinAlgoritmo
 
 Función dibujarIntentos(intentos)
