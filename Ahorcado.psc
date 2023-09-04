@@ -28,15 +28,15 @@ Algoritmo Ahorcado
 			Escribir ''
 			// leer la cantidad de letras de la palabra y las dibuja con un guion
 			Para i<-1 Hasta longitud_palabra Hacer
-				Escribir ' _ 'Sin Saltar // Salto de linea
+				Escribir ' _ 'Sin Saltar 
 			FinPara
-			Escribir ''
+			Escribir ''// Salto de linea
 			// ciclo repetitivo para pedir letras en el juego
 			Mientras intentos>=1 Hacer
 				contador_aciertos <- 0 // Salto de linea
-				Escribir ''
+				Escribir ''// Salto de linea
 				Escribir 'Has usado la letra: ', letras_jugador
-				Escribir 'Te quedan: ', intentos, ' intentos' // Salto de linea
+				Escribir 'Te quedan: ', intentos, ' intentos' 
 				Escribir 'Dime una letra: '
 				Leer letra
 				// ciclo para comprobar que la letra ya a sido usada
@@ -45,9 +45,9 @@ Algoritmo Ahorcado
 						control <- 1
 						j <- Longitud(letras_jugador)+1
 						i <- longitud_palabra+1
-						contador_aciertos <- 99
+						contador_aciertos <- 99 // evita conflictos con la ausencia de letras
 					SiNo
-						control <- 9 // evita conflictos con la ausencia de letras
+						control <- 9 
 					FinSi
 				FinPara
 				// si la letra es nueva, se agrega a la variable de letras 
@@ -57,8 +57,8 @@ Algoritmo Ahorcado
 				i <- 1
 				// recorre la palabra secreta y verifica si la letra existe en ella
 				Mientras i<=longitud_palabra Hacer
-					Si letra=Subcadena(palabra_secreta,i,i) Entonces // contador para recorrer los caracteres de la palabra secreta
-						contador_aciertos <- contador_aciertos+1
+					Si letra=Subcadena(palabra_secreta,i,i) Entonces 
+						contador_aciertos <- contador_aciertos+1 // contador para recorrer los caracteres de la palabra secreta
 						aciertos_acumulados <- aciertos_acumulados+1
 						Si aciertos_acumulados=longitud_palabra Entonces
 							i <- longitud_palabra+1
