@@ -27,17 +27,17 @@ Algoritmo Ahorcado
 			Escribir 'Adivina la palabra'
 			Escribir ''
 			// leer la cantidad de letras de la palabra y las dibuja con un guion
-			Para i<-1 Hasta longitud_palabra Hacer // Salto de linea
+			Para i<-1 Hasta longitud_palabra Hacer
 				Escribir ' _ 'Sin Saltar
-			FinPara
+			FinPara // Salto de linea
 			Escribir ''
 			// ciclo repetitivo para pedir letras en el juego
-			Mientras intentos>=1 Hacer // Salto de linea
+			Mientras intentos>=1 Hacer
 				contador_aciertos <- 0
-				Escribir ''
-				Escribir 'Has usado la letra: ', letras_jugador // Salto de linea
+				Escribir '' // Salto de linea
+				Escribir 'Has usado la letra: ', letras_jugador
 				Escribir 'Te quedan: ', intentos, ' intentos'
-				Escribir 'Dime una letra: '
+				Escribir 'Dime una letra: ' // Salto de linea
 				Leer letra
 				// ciclo para comprobar que la letra ya a sido usada
 				Para j<-1 Hasta Longitud(letras_jugador) Hacer
@@ -46,9 +46,9 @@ Algoritmo Ahorcado
 						j <- Longitud(letras_jugador)+1
 						i <- longitud_palabra+1
 						contador_aciertos <- 99
-					SiNo // evita conflictos con la ausencia de letras
+					SiNo
 						control <- 9
-					FinSi
+					FinSi // evita conflictos con la ausencia de letras
 				FinPara
 				// si la letra es nueva, se agrega a la variable de letras 
 				Si control=9 Entonces
@@ -56,9 +56,9 @@ Algoritmo Ahorcado
 				FinSi
 				i <- 1
 				// recorre la palabra secreta y verifica si la letra existe en ella
-				Mientras i<=longitud_palabra Hacer // contador para recorrer los caracteres de la palabra secreta
+				Mientras i<=longitud_palabra Hacer
 					Si letra=Subcadena(palabra_secreta,i,i) Entonces
-						contador_aciertos <- contador_aciertos+1
+						contador_aciertos <- contador_aciertos+1 // contador para recorrer los caracteres de la palabra secreta
 						aciertos_acumulados <- aciertos_acumulados+1
 						Si aciertos_acumulados=longitud_palabra Entonces
 							i <- longitud_palabra+1
@@ -191,4 +191,3 @@ Función dibujarIntentos(intentos)
 	FinSegún
 	Escribir ''
 FinFunción
-
